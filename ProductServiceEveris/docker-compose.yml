@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+  customer_service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: docker-product-service
+    restart: always
+    ports:
+      - 8091:8091
+    networks:
+      network_bank:
+        aliases:
+          - net_cloud
+networks:
+  network_bank:
+    name: net_cloud
+    external: true

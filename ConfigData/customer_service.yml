@@ -1,0 +1,33 @@
+server:
+   port: 8090
+   
+#Conextion to Mongo DB
+spring:
+  application:
+    name: customer_service
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/CUSTOMER
+         
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+management:
+  endpoints:
+    web:
+      exposre:
+        include: "*"
+        
+resilience4j.circuitbreaker:
+    instances:
+        customer-service:
+            failureRateThreshold: 40
+            waitDurationInOpenState: 4s
+            minimumNumberOfCalls: 5
+
+resilience4j.timelimiter:
+    instances:
+        customer-service:
+            timeoutDuration: 2s
+            cancelRunningFuture: true

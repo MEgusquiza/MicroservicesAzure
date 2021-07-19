@@ -1,0 +1,38 @@
+2021-07-09 02:06:01,078 INFO [background-preinit] org.hibernate.validator.internal.util.Version : HV000001: Hibernate Validator 6.2.0.Final
+2021-07-09 02:06:04,906 DEBUG [main] org.springframework.core.log.CompositeLog : HTTP GET http://localhost:8888/customer_service/default/main
+2021-07-09 02:06:04,910 DEBUG [main] org.springframework.core.log.CompositeLog : Accept=[application/json, application/*+json]
+2021-07-09 02:06:32,224 DEBUG [main] org.springframework.core.log.CompositeLog : Response 200 OK
+2021-07-09 02:06:32,226 DEBUG [main] org.springframework.core.log.CompositeLog : Reading to [org.springframework.cloud.config.environment.Environment]
+2021-07-09 02:06:32,934 INFO [main] org.springframework.boot.SpringApplication : The following profiles are active: dev
+2021-07-09 02:06:39,774 DEBUG [main] org.springframework.web.reactive.result.method.AbstractHandlerMethodMapping : 6 mappings in 'requestMappingHandlerMapping'
+2021-07-09 02:06:39,829 DEBUG [main] org.springframework.web.reactive.handler.SimpleUrlHandlerMapping : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2021-07-09 02:06:40,435 DEBUG [main] org.springframework.web.reactive.result.method.annotation.ControllerMethodResolver : ControllerAdvice beans: none
+2021-07-09 02:06:41,601 DEBUG [main] org.springframework.web.server.adapter.HttpWebHandlerAdapter : enableLoggingRequestDetails='false': form data and headers will be masked to prevent unsafe logging of potentially sensitive data
+2021-07-09 02:06:41,643 INFO [main] org.springframework.boot.StartupInfoLogger : Started CustomerControllerTest in 42.664 seconds (JVM running for 44.668)
+2021-07-09 02:06:42,558 DEBUG [main] org.springframework.core.log.LogFormatUtils : [115dcaea] HTTP GET /customer/60e231e30d2f326bba123479
+2021-07-09 02:06:42,893 DEBUG [parallel-1] org.springframework.core.log.LogFormatUtils : [6066e17a] HTTP GET "/customer/60e231e30d2f326bba123479"
+2021-07-09 02:06:42,964 DEBUG [parallel-1] org.springframework.web.reactive.handler.AbstractHandlerMapping : [6066e17a] Mapped to com.bank.manage.customer.controller.CustomerController#getCustomer(String)
+2021-07-09 02:06:43,235 DEBUG [parallel-1] org.springframework.web.reactive.result.HandlerResultHandlerSupport : [6066e17a] Found 'Content-Type:application/json' in response
+2021-07-09 02:06:43,236 DEBUG [parallel-1] org.springframework.web.reactive.result.method.annotation.AbstractMessageWriterResultHandler : [6066e17a] 0..1 [com.bank.manage.customer.persistence.entity.Customer]
+2021-07-09 02:06:43,352 DEBUG [parallel-1] org.springframework.core.log.CompositeLog : [6066e17a] Encoding [Customer(id=null, firstName=Katy, lastName=Puente, document=34563563, documentType=DNI, mail=manuel@ (truncated)...]
+2021-07-09 02:06:43,364 DEBUG [parallel-1] org.springframework.core.log.LogFormatUtils : [6066e17a] Completed 200 OK
+2021-07-09 02:06:43,371 DEBUG [parallel-1] org.springframework.core.log.LogFormatUtils : [115dcaea] [509a4d31] Response 200 OK
+2021-07-09 02:06:43,406 DEBUG [main] org.springframework.core.log.CompositeLog : [115dcaea] [509a4d31] Read 148 bytes
+2021-07-09 02:06:43,751 DEBUG [main] org.springframework.core.log.LogFormatUtils : [3f9b7fe1] HTTP GET /customer/name/Katy
+2021-07-09 02:06:43,753 DEBUG [parallel-2] org.springframework.core.log.LogFormatUtils : [260d635f] HTTP GET "/customer/name/Katy"
+2021-07-09 02:06:43,753 DEBUG [parallel-2] org.springframework.web.reactive.handler.AbstractHandlerMapping : [260d635f] Mapped to com.bank.manage.customer.controller.CustomerController#findByName(String)
+2021-07-09 02:06:43,755 DEBUG [parallel-2] org.springframework.web.reactive.result.HandlerResultHandlerSupport : [260d635f] Using 'application/json' given [*/*] and supported [application/json, application/*+json, application/x-ndjson, text/event-stream]
+2021-07-09 02:06:43,756 DEBUG [parallel-2] org.springframework.web.reactive.result.method.annotation.AbstractMessageWriterResultHandler : [260d635f] 0..1 [com.bank.manage.customer.persistence.entity.Customer]
+2021-07-09 02:06:43,757 DEBUG [parallel-2] org.springframework.core.log.CompositeLog : [260d635f] Encoding [Customer(id=null, firstName=Katy, lastName=Puente, document=34563563, documentType=DNI, mail=manuel@ (truncated)...]
+2021-07-09 02:06:43,757 DEBUG [parallel-2] org.springframework.core.log.LogFormatUtils : [260d635f] Completed 200 OK
+2021-07-09 02:06:43,758 DEBUG [parallel-2] org.springframework.core.log.LogFormatUtils : [3f9b7fe1] [69f783d5] Response 200 OK
+2021-07-09 02:06:43,815 DEBUG [main] org.springframework.core.log.CompositeLog : [3f9b7fe1] [69f783d5] Decoded [Customer(id=null, firstName=Katy, lastName=Puente, document=34563563, documentType=DNI, mail=manuel@ (truncated)...]
+2021-07-09 02:06:43,827 DEBUG [main] org.springframework.core.log.LogFormatUtils : [51d0ec6f] HTTP GET /customer/
+2021-07-09 02:06:43,830 DEBUG [parallel-3] org.springframework.core.log.LogFormatUtils : [44aacde8] HTTP GET "/customer/"
+2021-07-09 02:06:43,831 DEBUG [parallel-3] org.springframework.web.reactive.handler.AbstractHandlerMapping : [44aacde8] Mapped to com.bank.manage.customer.controller.CustomerController#getAllCustomers()
+2021-07-09 02:06:43,831 INFO [parallel-3] com.bank.manage.customer.controller.CustomerController :  EndPoit get by all customers {} 
+2021-07-09 02:06:43,833 DEBUG [parallel-3] org.springframework.web.reactive.result.HandlerResultHandlerSupport : [44aacde8] Found 'Content-Type:application/json' in response
+2021-07-09 02:06:43,834 DEBUG [parallel-3] org.springframework.web.reactive.result.method.annotation.AbstractMessageWriterResultHandler : [44aacde8] 0..N [com.bank.manage.customer.persistence.entity.Customer]
+2021-07-09 02:06:43,841 DEBUG [parallel-3] org.springframework.core.log.CompositeLog : [44aacde8] Encoding [[]]
+2021-07-09 02:06:43,843 DEBUG [parallel-3] org.springframework.core.log.LogFormatUtils : [44aacde8] Completed 200 OK
+2021-07-09 02:06:43,844 DEBUG [parallel-3] org.springframework.core.log.LogFormatUtils : [51d0ec6f] [4bf18b7] Response 200 OK

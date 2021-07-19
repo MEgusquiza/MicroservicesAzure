@@ -1,0 +1,19 @@
+server:
+   port: 8888
+            
+spring:
+ application:
+  name: config-server
+ profiles:    active:    - git
+ cloud:
+    config:
+      label: main
+      server:
+        git:
+          uri: https://github.com/MEgusquiza/MicroservicesAzure.git
+          searchPaths: ConfigData
+          username: ${GIT_USER}
+          password: ${GIT_PASSWORD}
+
+
+

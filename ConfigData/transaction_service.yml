@@ -1,0 +1,20 @@
+server:
+   port: 8092
+   
+#Conextion to Mongo DB
+spring:
+  application:
+    name: transaction_service
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/TRANSACTION
+         
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+management:
+  endpoints:
+    web:
+      exposre:
+        include: "*"
