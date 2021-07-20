@@ -4,6 +4,8 @@ package com.bank.manage.customer.controller;
 import com.bank.manage.customer.domain.service.CustomerService;
 import com.bank.manage.customer.persistence.entity.Customer;
 
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+
 import java.net.URI;
 
 import org.slf4j.Logger;
@@ -32,8 +34,9 @@ public class CustomerController {
     @Autowired
 	private CustomerService  customerService;
 	
+   @CircuitBreaker(name = "getCustomerByIdFallBackMethod", fallbackMethod = "getCustomerByIdFallBackMethod")
     @GetMapping("/{id}")  
-    public Mono<ResponseEntity<Customer>> getCustomer(@PathVariable("id") String id) {  
+    public Mono<ResponseEntity<Customer>> getCustomerById(@PathVariable("id") String id) {  
       Logger.debug(" EndPoint get by customer {} ", id);
       return customerService.findById(id).map(p -> ResponseEntity.ok()
            .contentType(MediaType.APPLICATION_JSON)
@@ -41,6 +44,7 @@ public class CustomerController {
             .defaultIfEmpty(ResponseEntity.notFound().build());
        }
       
+
     @GetMapping 
     public Mono<ResponseEntity<Flux<Customer>>> getAllCustomers() {
       Logger.info(" EndPoit get by all customers {} ");
@@ -83,19 +87,21 @@ public class CustomerController {
     }
     
     @GetMapping(value = "/name/{name}")
- //   @ResponseStatus(HttpStatus.OK)
+ //   @ResponseStatus(HttpStatus.OK)                
     public Mono<Customer> findByName(@PathVariable("name") String name) {
         return customerService.findByFirstName(name);
     }
     
     
-    public Mono<ResponseEntity<String>> allCustomers(Exception e) {
+
+    
+  //falback
+    public Mono<ResponseEntity<String>> getCustomerByIdFallBackMethod(Exception e) {
       Logger.info("FallBackMethod");
       return Mono.just("Service is down. Please, try later." +
               "\nSend this message to the administrator"+e.getMessage())
               .map(p-> new ResponseEntity<>(p, HttpStatus.INTERNAL_SERVER_ERROR));
-  }    
-    
-    
+  }
+
     
 }
