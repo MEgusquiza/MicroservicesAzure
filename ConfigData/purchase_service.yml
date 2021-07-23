@@ -4,16 +4,15 @@ server:
 #Conextion to Mongo DB
 spring:
   application:
-    name: product_service
+    name: purchase_service
   data:
     mongodb:
-      uri: mongodb://localhost:27017/PRODUCT
-#      uri: mongodb://admin:password@mongodb-service:27017/PRODUCT
+      uri: mongodb://localhost:27017/PURCHASE
+#      uri: mongodb://admin:password@mongodb-service:27017/PURCHASE
          
 eureka:
   client:
     serviceUrl:
-#      defaultZone: http://docker-registry-service:8761/eureka/
       defaultZone: http://localhost:8761/eureka/
 management:
   endpoints:

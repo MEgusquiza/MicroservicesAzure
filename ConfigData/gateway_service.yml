@@ -9,11 +9,6 @@ spring:
         uri: http://localhost:8090/
         predicates:
         - Path=/customer/**
-#        filters:
-#        - name: CircuitBreaker
-#          args:
-#              name: ms-customer
-#              fallbackuri: forward:/customerServiceFallBack
       - id: transaction_service
         uri: http://localhost:8092/
         predicates:
@@ -22,14 +17,11 @@ spring:
         uri: http://localhost:8093/
         predicates:
         - Path=/product/**
-        
-hystrix:
-    command:
-        fallbackcmd:
-            execution:
-                isolation:
-                    thread:
-                        timeoutInMilliseconds: 5000         
+      - id: purchase-service
+        uri: http://localhost:8094/
+        predicates:
+        - Path=/purchase/**  
+         
        
 eureka:
   client:
