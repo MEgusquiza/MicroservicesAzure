@@ -28,7 +28,19 @@ spring:
       - id: withdrawal_service
         uri: http://localhost:8096/
         predicates:
-        - Path=/withdrawal/**        
+        - Path=/withdrawal/**  
+      - id: deposit_service
+        uri: http://localhost:8097/
+        predicates:
+        - Path=/deposit/** 
+      - id: credit-consumer-service
+        uri: http://localhost:8098/
+        predicates:
+        - Path=/credit/**
+      - id: credit-payment-service
+        uri: http://localhost:8099/
+        predicates:
+        - Path=/payment/**        
          
        
 eureka:
