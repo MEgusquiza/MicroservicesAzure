@@ -1,14 +1,14 @@
 server:
-   port: 8095
+   port: 8096
    
 #Conextion to Mongo DB
 spring:
   application:
-    name: account_service
+    name: withdrawal_service
   data:
     mongodb:
-      uri: mongodb://localhost:27017/ACCOUNT
-#      uri: mongodb://admin:password@mongodb-service:27017/ACCOUNT
+      uri: mongodb://localhost:27017/WITHDRAWAL
+#      uri: mongodb://admin:password@mongodb-service:27017/WITHDRAWAL
          
 eureka:
   client:

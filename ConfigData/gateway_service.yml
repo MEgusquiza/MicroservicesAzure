@@ -24,7 +24,11 @@ spring:
       - id: account_service
         uri: http://localhost:8095/
         predicates:
-        - Path=/account/**        
+        - Path=/account/** 
+      - id: withdrawal_service
+        uri: http://localhost:8096/
+        predicates:
+        - Path=/withdrawal/**        
          
        
 eureka:
