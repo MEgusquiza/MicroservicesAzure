@@ -1,0 +1,21 @@
+server:
+   port: 8095
+   
+#Conextion to Mongo DB
+spring:
+  application:
+    name: purchase_service
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/ACCOUNT
+#      uri: mongodb://admin:password@mongodb-service:27017/ACCOUNT
+         
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+management:
+  endpoints:
+    web:
+      exposre:
+        include: "*"

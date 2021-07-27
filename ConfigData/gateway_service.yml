@@ -20,7 +20,11 @@ spring:
       - id: purchase_service
         uri: http://localhost:8094/
         predicates:
-        - Path=/purchase/**  
+        - Path=/purchase/**
+      - id: account_service
+        uri: http://localhost:8095/
+        predicates:
+        - Path=/account/**        
          
        
 eureka:
