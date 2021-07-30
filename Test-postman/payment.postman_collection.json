@@ -1,0 +1,37 @@
+{
+	"info": {
+		"_postman_id": "3951b350-91cc-4f4b-aecd-11255fff55a2",
+		"name": "payment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create payment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n    \"amount\": 100.0,\r\n    \"purchase\":{\r\n           },\r\n    \"description\":\"pay consume\",\r\n    \"purchaseDate\": \"2021-07-27 14:57:08\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/payment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"payment"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
