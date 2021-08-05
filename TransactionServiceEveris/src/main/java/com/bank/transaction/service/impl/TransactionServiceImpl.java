@@ -1,4 +1,4 @@
-package com.bank.transactionservice.domain.service.impl;
+package com.bank.transaction.service.impl;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -12,12 +12,12 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 
-import com.bank.transactionservice.domain.repository.TransactionRepository;
-import com.bank.transactionservice.domain.service.TransactionService;
-import com.bank.transactionservice.persistence.entity.Customer;
-import com.bank.transactionservice.persistence.entity.Product;
-import com.bank.transactionservice.persistence.entity.Representative;
-import com.bank.transactionservice.persistence.entity.Transaction;
+import com.bank.transaction.domain.repository.TransactionRepository;
+import com.bank.transaction.domain.service.TransactionService;
+import com.bank.transaction.model.Customer;
+import com.bank.transaction.model.Product;
+import com.bank.transaction.model.Representative;
+import com.bank.transaction.model.Transaction;
 
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;

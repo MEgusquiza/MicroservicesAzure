@@ -1,4 +1,4 @@
-package com.bank.transactionservice.domain.service;
+package com.bank.transaction.domain.service;
 
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;

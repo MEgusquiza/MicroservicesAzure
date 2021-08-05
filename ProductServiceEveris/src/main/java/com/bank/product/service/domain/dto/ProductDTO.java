@@ -1,8 +1,11 @@
 package com.bank.product.service.domain.dto;
 
+import java.time.LocalDateTime;
+
 import org.springframework.data.annotation.Id;
 
 import com.bank.product.service.persistence.entity.model.ProductDetail;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -17,5 +20,7 @@ public class ProductDTO {
     private String productName;
     private String productCategory;
     private String productType;
-    private ProductDetail detail;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss") 
+    private LocalDateTime paymentDate = LocalDateTime.now();
+  //  private ProductDetail detail;
 }

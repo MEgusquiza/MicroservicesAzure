@@ -20,8 +20,6 @@ public class RouterConfig {
                           .andRoute(RequestPredicates.POST("/api/client/"),handler::create)
                           .andRoute(RequestPredicates.PUT("/api/client/{id}"),handler::edit)
                           .andRoute(RequestPredicates.DELETE("/api/client/{id}"),handler::delete);
-       
-    
-  }
+   }
 
 }

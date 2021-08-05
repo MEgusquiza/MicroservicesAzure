@@ -8,5 +8,5 @@ public interface CRUDService <T,ID>{
     Flux<T> findAll();
     Mono<T> update(ID id,Mono<T> entity);
     Mono<T> create(Mono<T> entity);
-    Mono<T> deleteById(ID id);
+    Mono<T> delete(ID id);
 }

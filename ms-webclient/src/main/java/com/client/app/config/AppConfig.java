@@ -14,7 +14,6 @@ public class AppConfig {
   
   @Bean
   public WebClient createProduct() {
- //   url = "http://localhost:8090/api/product";
     return WebClient.create(url);
     
   }

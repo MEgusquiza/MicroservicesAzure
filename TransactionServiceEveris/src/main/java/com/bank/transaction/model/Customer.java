@@ -1,4 +1,4 @@
-package com.bank.transactionservice.persistence.entity;
+package com.bank.transaction.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;

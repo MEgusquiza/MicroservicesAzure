@@ -1,9 +1,9 @@
-package com.bank.transactionservice.domain.repository;
+package com.bank.transaction.domain.repository;
 
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 import org.springframework.stereotype.Repository;
 
-import com.bank.transactionservice.persistence.entity.Transaction;
+import com.bank.transaction.model.Transaction;
 
 
 

@@ -1,9 +1,9 @@
-package com.bank.transactionservice.domain.service;
+package com.bank.transaction.domain.service;
 
-import com.bank.transactionservice.persistence.entity.Customer;
-import com.bank.transactionservice.persistence.entity.Product;
-import com.bank.transactionservice.persistence.entity.Representative;
-import com.bank.transactionservice.persistence.entity.Transaction;
+import com.bank.transaction.model.Customer;
+import com.bank.transaction.model.Product;
+import com.bank.transaction.model.Representative;
+import com.bank.transaction.model.Transaction;
 
 import reactor.core.publisher.Mono;
 

@@ -1,0 +1,17 @@
+spring:
+ application:
+    name: purchase_service
+ cloud:
+    config:
+      uri: http://localhost:8888
+
+#server:
+#   port: 8094
+   
+#Conextion to Mongo DB
+#spring:
+#  application:
+#    name: purchase_service
+#  data:
+#    mongodb:
+#      uri: mongodb://localhost:27017/PURCHASE

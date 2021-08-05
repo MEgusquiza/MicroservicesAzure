@@ -1,4 +1,4 @@
-package com.bank.transactionservice.controller;
+package com.bank.transaction.controller;
 
 
 import reactor.core.publisher.Flux;
@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.bank.transactionservice.domain.service.TransactionService;
-import com.bank.transactionservice.persistence.entity.Transaction;
+import com.bank.transaction.domain.service.TransactionService;
+import com.bank.transaction.model.Transaction;
 
 
 @RestController
